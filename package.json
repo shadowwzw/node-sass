@@ -1,5 +1,5 @@
 {
-  "name": "node-sass",
+  "name": "node-sass-with-bindings",
   "version": "4.5.3",
   "libsass": "3.5.0.beta.2",
   "description": "Wrapper around libsass",
@@ -32,8 +32,7 @@
     "postinstall": "node scripts/build.js",
     "lint": "node_modules/.bin/eslint bin/node-sass lib scripts test",
     "test": "node_modules/.bin/mocha test/{*,**/**}.js",
-    "build": "node scripts/build.js --force",
-    "prepublish": "not-in-install && node scripts/prepublish.js || in-install"
+    "build": "node scripts/build.js --force"
   },
   "files": [
     "bin",
