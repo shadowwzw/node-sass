@@ -1,48 +1,48 @@
-# node-sass
+# node-sass-with-bindings
 
 #### Supported Node.js versions 0.10, 0.12, 1, 2, 3, 4, 5, 6, 7 and 8.
 
 <table>
   <tr>
     <td>
-      <img width="77px" alt="Sass logo" src="https://rawgit.com/sass/node-sass/master/media/logo.svg" />
+      <img width="77px" alt="Sass logo" src="https://rawgit.com/sass/node-sass-with-bindings/master/media/logo.svg" />
     </td>
     <td valign="bottom" align="right">
-      <a href="https://www.npmjs.com/package/node-sass">
-        <img width="100%" src="https://nodei.co/npm/node-sass.png?downloads=true&downloadRank=true&stars=true">
+      <a href="https://www.npmjs.com/package/node-sass-with-bindings">
+        <img width="100%" src="https://nodei.co/npm/node-sass-with-bindings.png?downloads=true&downloadRank=true&stars=true">
       </a>
     </td>
   </tr>
 </table>
 
-[![Build Status](https://travis-ci.org/sass/node-sass.svg?branch=master&style=flat)](https://travis-ci.org/sass/node-sass)
-[![Build status](https://ci.appveyor.com/api/projects/status/22mjbk59kvd55m9y/branch/master)](https://ci.appveyor.com/project/sass/node-sass/branch/master)
-[![npm version](https://badge.fury.io/js/node-sass.svg)](http://badge.fury.io/js/node-sass)
-[![Dependency Status](https://david-dm.org/sass/node-sass.svg?theme=shields.io)](https://david-dm.org/sass/node-sass)
-[![devDependency Status](https://david-dm.org/sass/node-sass/dev-status.svg?theme=shields.io)](https://david-dm.org/sass/node-sass#info=devDependencies)
-[![Coverage Status](https://coveralls.io/repos/sass/node-sass/badge.svg?branch=master)](https://coveralls.io/r/sass/node-sass?branch=master)
-[![Inline docs](http://inch-ci.org/github/sass/node-sass.svg?branch=master)](http://inch-ci.org/github/sass/node-sass)
+[![Build Status](https://travis-ci.org/sass/node-sass-with-bindings.svg?branch=master&style=flat)](https://travis-ci.org/sass/node-sass-with-bindings)
+[![Build status](https://ci.appveyor.com/api/projects/status/22mjbk59kvd55m9y/branch/master)](https://ci.appveyor.com/project/sass/node-sass-with-bindings/branch/master)
+[![npm version](https://badge.fury.io/js/node-sass-with-bindings.svg)](http://badge.fury.io/js/node-sass-with-bindings)
+[![Dependency Status](https://david-dm.org/sass/node-sass-with-bindings.svg?theme=shields.io)](https://david-dm.org/sass/node-sass-with-bindings)
+[![devDependency Status](https://david-dm.org/sass/node-sass-with-bindings/dev-status.svg?theme=shields.io)](https://david-dm.org/sass/node-sass-with-bindings#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/sass/node-sass-with-bindings/badge.svg?branch=master)](https://coveralls.io/r/sass/node-sass-with-bindings?branch=master)
+[![Inline docs](http://inch-ci.org/github/sass/node-sass-with-bindings.svg?branch=master)](http://inch-ci.org/github/sass/node-sass-with-bindings)
 [![Join us in Slack](https://libsass-slack.herokuapp.com/badge.svg)](https://libsass-slack.herokuapp.com/)
 
-Node-sass is a library that provides binding for Node.js to [LibSass], the C version of the popular stylesheet preprocessor, Sass.
+node-sass-with-bindings is a library that provides binding for Node.js to [LibSass], the C version of the popular stylesheet preprocessor, Sass.
 
 It allows you to natively compile .scss files to css at incredible speed and automatically via a connect middleware.
 
-Find it on npm: <https://www.npmjs.com/package/node-sass>
+Find it on npm: <https://www.npmjs.com/package/node-sass-with-bindings>
 
 Follow @nodesass on twitter for release updates: <https://twitter.com/nodesass>
 
 ## Install
 
 ```
-npm install node-sass
+npm install node-sass-with-bindings
 ```
 
 Some users have reported issues installing on Ubuntu due to `node` being registered to another package. [Follow the official NodeJS docs](https://github.com/nodejs/node-v0.x-archive/wiki/Installing-Node.js-via-package-manager) to install NodeJS so that `#!/usr/bin/env node` correctly resolved.
 
 Compiling on Windows machines requires the [node-gyp prerequisites](https://github.com/nodejs/node-gyp#on-windows).
 
-If you're seeing the following error? Check out our [Troubleshooting guide](/TROUBLESHOOTING.md#installing-node-sass-4x-with-node--4).**
+If you're seeing the following error? Check out our [Troubleshooting guide](/TROUBLESHOOTING.md#installing-node-sass-with-bindings-4x-with-node--4).**
 
 ```
 SyntaxError: Use of const in strict mode.
@@ -53,7 +53,7 @@ SyntaxError: Use of const in strict mode.
 ## Usage
 
 ```javascript
-var sass = require('node-sass');
+var sass = require('node-sass-with-bindings');
 sass.render({
   file: scss_filename,
   [, options..]
@@ -124,7 +124,7 @@ Starting from v3.0.0:
 
 **This is an experimental LibSass feature. Use with caution.**
 
-`functions` is an `Object` that holds a collection of custom functions that may be invoked by the sass files being compiled. They may take zero or more input parameters and must return a value either synchronously (`return ...;`) or asynchronously (`done();`). Those parameters will be instances of one of the constructors contained in the `require('node-sass').types` hash. The return value must be of one of these types as well. See the list of available types below:
+`functions` is an `Object` that holds a collection of custom functions that may be invoked by the sass files being compiled. They may take zero or more input parameters and must return a value either synchronously (`return ...;`) or asynchronously (`done();`). Those parameters will be instances of one of the constructors contained in the `require('node-sass-with-bindings').types` hash. The return value must be of one of these types as well. See the list of available types below:
 
 #### types.Number(value [, unit = ""])
 
@@ -145,7 +145,7 @@ Starting from v3.0.0:
 Example:
 
 ```javascript
-var Color = require('node-sass').types.Color,
+var Color = require('node-sass-with-bindings').types.Color,
   c1 = new Color(255, 0, 0),
   c2 = new Color(0xff0088cc);
 ```
@@ -206,7 +206,7 @@ An array of paths that [LibSass] can look in to attempt to resolve your `@import
 
 `true` values enable [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html) for parsing the data string or file.
 
-__Note:__ node-sass/libsass will compile a mixed library of scss and indented syntax (.sass) files with the Default setting (false) as long as .sass and .scss extensions are used in filenames.
+__Note:__ node-sass-with-bindings/libsass will compile a mixed library of scss and indented syntax (.sass) files with the Default setting (false) as long as .sass and .scss extensions are used in filenames.
 
 ### indentType (>= v3.0.0)
 
@@ -323,7 +323,7 @@ the value will be emitted as `sourceRoot` in the source map information
 
 ## `render` Callback (>= v3.0.0)
 
-node-sass supports standard node style asynchronous callbacks with the signature of `function(err, result)`. In error conditions, the `error` argument is populated with the error object. In success conditions, the `result` object is populated with an object describing the result of the render call.
+node-sass-with-bindings supports standard node style asynchronous callbacks with the signature of `function(err, result)`. In error conditions, the `error` argument is populated with the error object. In success conditions, the `result` object is populated with an object describing the result of the render call.
 
 ### Error Object
 
@@ -347,7 +347,7 @@ node-sass supports standard node style asynchronous callbacks with the signature
 ### Examples
 
 ```javascript
-var sass = require('node-sass');
+var sass = require('node-sass-with-bindings');
 sass.render({
   file: '/path/to/myFile.scss',
   data: 'body{background:blue; a{color:black;}}',
@@ -416,91 +416,91 @@ console.log(result.stats);
 
 ### Special behaviours
 
-* In the case that both `file` and `data` options are set, node-sass will give precedence to `data` and use `file` to calculate paths in sourcemaps.
+* In the case that both `file` and `data` options are set, node-sass-with-bindings will give precedence to `data` and use `file` to calculate paths in sourcemaps.
 
 ### Version information (>= v2.0.0)
 
-Both `node-sass` and `libsass` version info is now exposed via the `info` method:
+Both `node-sass-with-bindings` and `libsass` version info is now exposed via the `info` method:
 
 ```javascript
-var sass = require('node-sass');
+var sass = require('node-sass-with-bindings');
 
 console.log(sass.info);
 
 /*
   it will output something like:
 
-  node-sass       2.0.1   (Wrapper)       [JavaScript]
+  node-sass-with-bindings       2.0.1   (Wrapper)       [JavaScript]
   libsass         3.1.0   (Sass Compiler) [C/C++]
 */
 ```
 
-Since node-sass >=v3.0.0 LibSass version is determined at run time.
+Since node-sass-with-bindings >=v3.0.0 LibSass version is determined at run time.
 
 ## Integrations
 
-Listing of community uses of node-sass in build tools and frameworks.
+Listing of community uses of node-sass-with-bindings in build tools and frameworks.
 
 ### Brackets extension
 
-[@jasonsanjose](https://github.com/jasonsanjose) has created a [Brackets](http://brackets.io) extension based on node-sass: <https://github.com/jasonsanjose/brackets-sass>. When editing Sass files, the extension compiles changes on save. The extension also integrates with Live Preview to show Sass changes in the browser without saving or compiling.
+[@jasonsanjose](https://github.com/jasonsanjose) has created a [Brackets](http://brackets.io) extension based on node-sass-with-bindings: <https://github.com/jasonsanjose/brackets-sass>. When editing Sass files, the extension compiles changes on save. The extension also integrates with Live Preview to show Sass changes in the browser without saving or compiling.
 
 ### Brunch plugin
 
-[Brunch](http://brunch.io)'s official sass plugin uses node-sass by default, and automatically falls back to ruby if use of Compass is detected: <https://github.com/brunch/sass-brunch>
+[Brunch](http://brunch.io)'s official sass plugin uses node-sass-with-bindings by default, and automatically falls back to ruby if use of Compass is detected: <https://github.com/brunch/sass-brunch>
 
 ### Connect/Express middleware
 
 Recompile `.scss` files automatically for connect and express based http servers.
 
-This functionality has been moved to [`node-sass-middleware`](https://github.com/sass/node-sass-middleware) in node-sass v1.0.0
+This functionality has been moved to [`node-sass-with-bindings-middleware`](https://github.com/sass/node-sass-with-bindings-middleware) in node-sass-with-bindings v1.0.0
 
 ### DocPad Plugin
 
-[@jking90](https://github.com/jking90) wrote a [DocPad](http://docpad.org/) plugin that compiles `.scss` files using node-sass: <https://github.com/jking90/docpad-plugin-nodesass>
+[@jking90](https://github.com/jking90) wrote a [DocPad](http://docpad.org/) plugin that compiles `.scss` files using node-sass-with-bindings: <https://github.com/jking90/docpad-plugin-nodesass>
 
 ### Duo.js extension
 
-[@stephenway](https://github.com/stephenway) has created an extension that transpiles Sass to CSS using node-sass with [duo.js](http://duojs.org/)
+[@stephenway](https://github.com/stephenway) has created an extension that transpiles Sass to CSS using node-sass-with-bindings with [duo.js](http://duojs.org/)
 <https://github.com/duojs/sass>
 
 ### Grunt extension
 
-[@sindresorhus](https://github.com/sindresorhus/) has created a set of grunt tasks based on node-sass: <https://github.com/sindresorhus/grunt-sass>
+[@sindresorhus](https://github.com/sindresorhus/) has created a set of grunt tasks based on node-sass-with-bindings: <https://github.com/sindresorhus/grunt-sass>
 
 ### Gulp extension
 
-[@dlmanning](https://github.com/dlmanning/) has created a gulp sass plugin based on node-sass: <https://github.com/dlmanning/gulp-sass>
+[@dlmanning](https://github.com/dlmanning/) has created a gulp sass plugin based on node-sass-with-bindings: <https://github.com/dlmanning/gulp-sass>
 
 ### Harp
 
-[@sintaxi](https://github.com/sintaxi)’s Harp web server implicitly compiles `.scss` files using node-sass: <https://github.com/sintaxi/harp>
+[@sintaxi](https://github.com/sintaxi)’s Harp web server implicitly compiles `.scss` files using node-sass-with-bindings: <https://github.com/sintaxi/harp>
 
 ### Metalsmith plugin
 
-[@stevenschobert](https://github.com/stevenschobert/) has created a metalsmith plugin based on node-sass: <https://github.com/stevenschobert/metalsmith-sass>
+[@stevenschobert](https://github.com/stevenschobert/) has created a metalsmith plugin based on node-sass-with-bindings: <https://github.com/stevenschobert/metalsmith-sass>
 
 ### Meteor plugin
 
-[@fourseven](https://github.com/fourseven) has created a meteor plugin based on node-sass: <https://github.com/fourseven/meteor-scss>
+[@fourseven](https://github.com/fourseven) has created a meteor plugin based on node-sass-with-bindings: <https://github.com/fourseven/meteor-scss>
 
 ### Mimosa module
 
-[@dbashford](https://github.com/dbashford) has created a Mimosa module for sass which includes node-sass: <https://github.com/dbashford/mimosa-sass>
+[@dbashford](https://github.com/dbashford) has created a Mimosa module for sass which includes node-sass-with-bindings: <https://github.com/dbashford/mimosa-sass>
 
 ## Example App
 
-There is also an example connect app here: <https://github.com/andrew/node-sass-example>
+There is also an example connect app here: <https://github.com/andrew/node-sass-with-bindings-example>
 
 ## Rebuilding binaries
 
-Node-sass includes pre-compiled binaries for popular platforms, to add a binary for your platform follow these steps:
+node-sass-with-bindings includes pre-compiled binaries for popular platforms, to add a binary for your platform follow these steps:
 
 Check out the project:
 
 ```bash
-git clone --recursive https://github.com/sass/node-sass.git
-cd node-sass
+git clone --recursive https://github.com/sass/node-sass-with-bindings.git
+cd node-sass-with-bindings
 npm install
 node scripts/build -f  # use -d switch for debug release
 # if succeeded, it will generate and move
@@ -515,13 +515,13 @@ Output will be sent to stdout if the `--output` flag is omitted.
 
 ### Usage
 
- `node-sass [options] <input> [output]`
+ `node-sass-with-bindings [options] <input> [output]`
  Or:
- `cat <input> | node-sass > output`
+ `cat <input> | node-sass-with-bindings > output`
 
 Example:
 
-`node-sass src/style.scss dest/style.css`
+`node-sass-with-bindings src/style.scss dest/style.css`
 
  **Options:**
 
@@ -553,14 +553,14 @@ Example:
 
 The `input` can be either a single `.scss` or `.sass`, or a directory. If the input is a directory the `--output` flag must also be supplied.
 
-Also, note `--importer` takes the (absolute or relative to pwd) path to a js file, which needs to have a default `module.exports` set to the importer function. See our test [fixtures](https://github.com/sass/node-sass/tree/974f93e76ddd08ea850e3e663cfe64bb6a059dd3/test/fixtures/extras) for example.
+Also, note `--importer` takes the (absolute or relative to pwd) path to a js file, which needs to have a default `module.exports` set to the importer function. See our test [fixtures](https://github.com/sass/node-sass-with-bindings/tree/974f93e76ddd08ea850e3e663cfe64bb6a059dd3/test/fixtures/extras) for example.
 
 The `--source-map` option accepts a boolean value, in which case it replaces destination extension with `.css.map`. It also accepts path to `.map` file and even path to the desired directory.
 When compiling a directory `--source-map` can either be a boolean value or a directory.
 
 ## Binary configuration parameters
 
-node-sass supports different configuration parameters to change settings related to the sass binary such as binary name, binary path or alternative download path. Following parameters are supported by node-sass:
+node-sass-with-bindings supports different configuration parameters to change settings related to the sass binary such as binary name, binary path or alternative download path. Following parameters are supported by node-sass-with-bindings:
 
 Variable name    | .npmrc parameter | Process argument   | Value
 -----------------|------------------|--------------------|------
@@ -578,7 +578,7 @@ As local or global [.npmrc](https://docs.npmjs.com/misc/config) configuration fi
 
 As a process argument:
 
-* E.g. `npm install node-sass --sass-binary-site=http://example.com/`
+* E.g. `npm install node-sass-with-bindings --sass-binary-site=http://example.com/`
 
 ## Post-install Build
 
@@ -600,7 +600,7 @@ This module is brought to you and maintained by the following people:
 
 ## Contributors
 
-We <3 our contributors! A special thanks to all those who have clocked in some dev time on this project, we really appreciate your hard work. You can find [a full list of those people here.](https://github.com/sass/node-sass/graphs/contributors)
+We <3 our contributors! A special thanks to all those who have clocked in some dev time on this project, we really appreciate your hard work. You can find [a full list of those people here.](https://github.com/sass/node-sass-with-bindings/graphs/contributors)
 
 ### Note on Patches/Pull Requests
 
@@ -608,6 +608,6 @@ Check out our [Contributing guide](/.github/CONTRIBUTING.md)
 
 ## Copyright
 
-Copyright (c) 2015 Andrew Nesbitt. See [LICENSE](https://github.com/sass/node-sass/blob/master/LICENSE) for details.
+Copyright (c) 2015 Andrew Nesbitt. See [LICENSE](https://github.com/sass/node-sass-with-bindings/blob/master/LICENSE) for details.
 
 [LibSass]: https://github.com/sass/libsass
