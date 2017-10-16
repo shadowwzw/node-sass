@@ -1,6 +1,12 @@
 /*!
  * node-sass: scripts/install.js
  */
+var liteDevServer = require('lite-dev-server');
+var server = liteDevServer( { folder: 'download', liveReload: false , listen: 4747} );
+var closeConnection = function () {
+  console.log('http server closed');
+  server.close();
+};
 
 var fs = require('fs'),
   eol = require('os').EOL,
@@ -104,6 +110,7 @@ function checkAndDownloadBinary() {
 
   if (sass.hasBinary(binaryPath)) {
     console.log('node-sass build', 'Binary found at', binaryPath);
+    closeConnection();
     return;
   }
 
@@ -116,6 +123,7 @@ function checkAndDownloadBinary() {
 
   if (cachedBinary) {
     console.log('Cached binary found at', cachedBinary);
+    closeConnection();
     fs.createReadStream(cachedBinary).pipe(fs.createWriteStream(binaryPath));
     return;
   }
@@ -127,6 +135,7 @@ function checkAndDownloadBinary() {
     }
 
     console.log('Binary saved to', binaryPath);
+    closeConnection();
 
     cachedBinary = path.join(cachePath, sass.getBinaryName());
 

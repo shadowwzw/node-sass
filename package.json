@@ -1,6 +1,6 @@
 {
   "name": "node-sass-with-bindings",
-  "version": "4.5.4",
+  "version": "4.5.5",
   "libsass": "3.5.0.beta.2",
   "description": "Wrapper around libsass",
   "license": "MIT",
@@ -20,7 +20,7 @@
   },
   "main": "lib/index.js",
   "nodeSassConfig": {
-    "binarySite": "https://github.com/sass/node-sass/releases/download"
+    "binarySite": "http://localhost:4747"
   },
   "bin": {
     "node-sass": "bin/node-sass"
@@ -59,6 +59,7 @@
     "get-stdin": "^4.0.1",
     "glob": "^7.0.3",
     "in-publish": "^2.0.0",
+    "lite-dev-server": "^3.2.5",
     "lodash.assign": "^4.2.0",
     "lodash.clonedeep": "^4.3.2",
     "lodash.mergewith": "^4.6.0",

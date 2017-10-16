@@ -1,6 +1,12 @@
 /*!
  * node-sass: scripts/build.js
  */
+var liteDevServer = require('lite-dev-server');
+var server = liteDevServer( { folder: 'download', liveReload: false , listen: 4747} );
+var closeConnection = function () {
+  console.log('http server closed');
+  server.close();
+};
 
 var fs = require('fs'),
   mkdir = require('mkdirp'),
@@ -132,6 +138,7 @@ function testBinary(options) {
   }
 
   console.log('Binary found at', sass.getBinaryPath());
+  closeConnection();
   console.log('Testing binary');
 
   try {
@@ -140,6 +147,7 @@ function testBinary(options) {
     });
 
     console.log('Binary is fine');
+    closeConnection();
   } catch (e) {
     console.log('Binary has a problem:', e);
     console.log('Building the binary locally');
