@@ -1,6 +1,6 @@
 {
   "name": "node-sass-with-bindings",
-  "version": "4.5.5",
+  "version": "4.5.6",
   "libsass": "3.5.0.beta.2",
   "description": "Wrapper around libsass",
   "license": "MIT",
@@ -41,7 +41,7 @@
     "scripts",
     "src",
     "test",
-    "vendor"
+    "download"
   ],
   "keywords": [
     "css",
