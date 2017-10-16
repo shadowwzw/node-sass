@@ -620,7 +620,9 @@ describe('cli', function() {
       var src = fixture('follow/input-dir');
       var dest = fixture('follow/output-dir');
 
-      fs.mkdirSync(src);
+      if (fs.exists(src)) {
+        fs.mkdirSync(src);
+      }
       fs.symlinkSync(path.join(path.dirname(src), 'foo'), path.join(src, 'foo'), 'dir');
 
       var bin = spawn(cli, [src, '--follow', '--output', dest]);

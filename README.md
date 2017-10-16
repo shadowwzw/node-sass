@@ -24,6 +24,8 @@
 [![Inline docs](http://inch-ci.org/github/sass/node-sass-with-bindings.svg?branch=master)](http://inch-ci.org/github/sass/node-sass-with-bindings)
 [![Join us in Slack](https://libsass-slack.herokuapp.com/badge.svg)](https://libsass-slack.herokuapp.com/)
 
+Does not require Internet access for downloading binary files.
+
 node-sass-with-bindings is a library that provides binding for Node.js to [LibSass], the C version of the popular stylesheet preprocessor, Sass.
 
 It allows you to natively compile .scss files to css at incredible speed and automatically via a connect middleware.
