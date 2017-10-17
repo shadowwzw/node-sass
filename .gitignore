@@ -12,3 +12,4 @@ test/fixtures/watching-css-out-02
 coverage
 .idea
 yarn.lock
+vendor
